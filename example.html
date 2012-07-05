@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Cross Domain Storage Example</title>
+		<script type="text/javascript" src="xds.js"></script>
+		<script>
+		window.onload = function(){
+			
+			//create a new xds instance
+			var x = new xds("http://192.168.1.7/js/xds/xds-serve/xds-serve.html");
+			
+			//test out the set, get, and remove item functions.
+			x.setItem('test','Test Success!', function(response){
+				console.log('Item set, response: ');
+				console.log(response);
+				
+				x.getItem('test', function(val, response){
+					console.log('Item get, val: ' + val + ' response: ');
+					console.log(response);
+					
+					x.removeItem('test', function(response){
+						console.log("Item removed!");
+						console.log(response);
+					});
+				});
+			});
+			
+			//testing out the set, get and remove object functions.
+			x.setObject('objtest',{test:'Test Success!'}, function(response){
+				console.log('Object set, response: ');
+				console.log(response);
+				
+				x.getObject('objtest', function(val, response){
+					console.log('Object get, val: ');
+					console.log(val);
+					console.log('Response: ');
+					console.log(response);
+					
+					x.removeObject('objtest', function(response){
+						console.log("Object removed!");
+						console.log(response);
+					});
+				});
+			});
+			
+			//checking nulls work
+			x.setObject('nulltest',null,function(response){
+				x.getObject('nulltest',function(val){
+					console.log("Null test val: ");
+					console.log(val);
+					x.removeObject('nulltest');
+				})
+			})
+		};	
+		</script>
+	</head>
+	<body>
+		<div>
+		Test
+		</div>
+	</body>
+</html>
