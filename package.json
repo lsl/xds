@@ -1,0 +1,22 @@
+{
+  "name": "xds",
+  "version": "0.0.0",
+  "description": "Cross Domain Storage (xds)",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lsl/xds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsl/xds/issues"
+  },
+  "homepage": "https://github.com/lsl/xds",
+  "dependencies": {
+    "express": "~3.4.8"
+  }
+}

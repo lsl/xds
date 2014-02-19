@@ -6,7 +6,7 @@
 		window.onload = function(){
 			
 			//create a new xds instance
-			var x = new xds("http://192.168.1.7/js/xds/xds-serve/xds-serve.html");
+			var x = new xds("http://0.0.0.0:3001/xds-server.html");
 			
 			//test out the set, get, and remove item functions.
 			x.setItem('test','Test Success!', function(response){
@@ -55,7 +55,7 @@
 	</head>
 	<body>
 		<div>
-		Test
+		Client, inspect your browser elements, and view the javascript console.log output.
 		</div>
 	</body>
 </html>
