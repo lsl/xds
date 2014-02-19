@@ -19,5 +19,5 @@ client.all('/', function(req, res){
 http.createServer(client).listen(3000);
 console.log("client listening http://localhost:3000");
 console.log("");
-console.log("View http://localhost:3000/example in a browser, inspect console output");
+console.log("View http://localhost:3000/ in a browser, inspect console output");
 
